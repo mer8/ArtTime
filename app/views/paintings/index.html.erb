@@ -1,0 +1,42 @@
+<div class="main">
+
+	<h1>Awesome Famous Paintings</h1>
+
+	<% @paintings.each do |p| %>
+
+
+		<div class="painting">
+			<%=p.name%>
+		</div>
+		<div class="details">
+			Painted by <%=p.artist%> in <%=p.year %>.
+
+				<!-- Button trigger modal -->
+				<button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
+				  Artist Info
+				</button>
+
+				<!-- Modal -->
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				  <div class="modal-dialog">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				        <h4 class="modal-title" id="myModalLabel">Artist Information</h4>
+				      </div>
+				      <div class="modal-body">
+				        	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam luctus mauris sodales leo consequat, eget ullamcorper arcu sagittis. Integer pharetra sapien id nulla malesuada rhoncus. Suspendisse eleifend, diam quis vestibulum laoreet, dui neque fermentum lacus, vel imperdiet ante arcu at sem. Quisque a gravida lectus. Aenean feugiat fringilla massa sit amet dictum. Mauris ornare placerat odio, sit amet elementum libero vestibulum quis. Aenean a lectus nunc. Ut at neque lobortis, lacinia ligula tempus, egestas purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec mollis velit ut sapien lacinia pulvinar. Nullam ornare consectetur tortor, et vestibulum felis sodales non. Integer consectetur dui nulla.
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+		</div>
+
+
+
+	<% end %>
+
+</div>
